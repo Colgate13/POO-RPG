@@ -12,18 +12,6 @@ try {
 
     console.log(colgate.name)
 
-
-    // const denis = new Player('Denis Soltado', 'Guerreiro', 15, 10);
-    // console.log(denis.status);
-    
-    // const colgate = new Player('Colgate Ladino', 'Ladino', 10, 15);
-    // console.log(colgate.status);
-
-    // console.log(denis.batalha(denis, colgate));
-
-    // console.log(denis.name);
-    // console.log(denis.name = 'Soltado PIKA DURA');
-    // console.log(denis.name)
     console.log(denis.status)
     console.log(colgate.status)
 
