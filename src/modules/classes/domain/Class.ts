@@ -1,6 +1,6 @@
-import Utils from "../utils/Utils";
+import Dices from "../../Dices/Dices";
 
-interface statusProps {
+export interface statusProps {
     nome: string,
     vida: number,
     raca: string,
@@ -18,7 +18,7 @@ export interface ataqueProps {
     dano: number;
 }
 
-export abstract class Personagem{
+export abstract class Class{
     protected _nome: string;
     protected classe: 'Mago' | 'Guerreiro' | 'Ladino' = 'Guerreiro';
     protected nivel: number = 0;
@@ -61,8 +61,8 @@ export abstract class Personagem{
 
     public abstract ataqueDefault(): ataqueProps;
 
-    public batalha(player1: Personagem, player2: Personagem): string{
-        const initialAtacante = Utils.random(0)
+    public batalha(player1: Class, player2: Class): string{
+        const initialAtacante = Dices.d20(0)
 
         if(initialAtacante >= 10){
             player2.vida = player2.vida - player1.ataqueDefault().dano

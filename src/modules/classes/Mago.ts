@@ -1,6 +1,7 @@
-import { ataqueProps, Personagem } from "../personagem/Personagem";
-import Utils from '../utils/Utils'
-export default class Mago extends Personagem{
+import { Class, ataqueProps } from "./domain/Class";
+import Dices from "../Dices/Dices";
+
+export class Mago extends Class{
  
     constructor(nome: string, 
         strength: number,
@@ -19,19 +20,19 @@ export default class Mago extends Personagem{
         this.classe = "Mago";
         this.nivel = 3;
 
-        this.vida = Utils.random(100) + 5;
+        this.vida = Dices.d20(100) + 5;
 
 
-        this.strength = Utils.random(strength) - 3;
-        this.destreza = Utils.random(destreza) + 1;
-        this.constitution = Utils.random(constitution) + 1;
-        this.inteligencia = Utils.random(inteligencia) + 5;
-        this.sabedoria = Utils.random(sabedoria) + 5;
-        this.carisma = Utils.random(carisma) - 2;
+        this.strength = Dices.d20(strength) - 3;
+        this.destreza = Dices.d20(destreza) + 1;
+        this.constitution = Dices.d20(constitution) + 1;
+        this.inteligencia = Dices.d20(inteligencia) + 5;
+        this.sabedoria = Dices.d20(sabedoria) + 5;
+        this.carisma = Dices.d20(carisma) - 2;
 
         this.ataques.push({ 
             name: `Default ${this.classe} Ataque`, 
-            dano: (Utils.random(this.inteligencia) + (this.nivel + this.sabedoria)) 
+            dano: (Dices.d20(this.inteligencia) + (this.nivel + this.sabedoria)) 
         })
     }
 

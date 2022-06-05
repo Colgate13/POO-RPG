@@ -1,7 +1,7 @@
-import { Personagem, ataqueProps } from "../personagem/Personagem";
-import Utils from '../utils/Utils'
+import { Class, ataqueProps } from "./domain/Class";
+import Dices from "../Dices/Dices";
 
-export default class Ladino extends Personagem{
+export class Ladino extends Class{
 
     constructor(nome: string, 
         strength: number,
@@ -20,18 +20,18 @@ export default class Ladino extends Personagem{
         this.classe = "Ladino";
         this.nivel = 3;
 
-        this.vida = Utils.random(100) + 10;
+        this.vida = Dices.d20(100) + 10;
 
-        this.strength = Utils.random(strength) + 1;
-        this.destreza = Utils.random(destreza) + 5;
-        this.constitution = Utils.random(constitution) - 1;
-        this.inteligencia = Utils.random(inteligencia) + 2;
-        this.sabedoria = Utils.random(sabedoria) + 1;
-        this.carisma = Utils.random(carisma) + 1;
+        this.strength = Dices.d20(strength) + 1;
+        this.destreza = Dices.d20(destreza) + 5;
+        this.constitution = Dices.d20(constitution) - 1;
+        this.inteligencia = Dices.d20(inteligencia) + 2;
+        this.sabedoria = Dices.d20(sabedoria) + 1;
+        this.carisma = Dices.d20(carisma) + 1;
 
         this.ataques.push({ 
             name: "Default Ladino Ataque", 
-            dano: (Utils.random(this.destreza) + (this.nivel + this.strength)) 
+            dano: (Dices.d20(this.destreza) + (this.nivel + this.strength)) 
         })
 
     }
