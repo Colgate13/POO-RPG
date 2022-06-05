@@ -11,7 +11,7 @@
 
 <div id="about"></div>
 
-Template para criação de projetos em nodejs usando typescript e testes automatizados.
+Estudando typescript e Orientação a objetos. Foi desenvolvido um motor basico para um jogo ASCII simples, com movimentação, importação de mapas e criação. Após realizar este projeto foi iniciado o desenvolvimento do typesgine-ascii - https://github.com/Colgate13/typesgine-ascii
 
 ## Tecnologias 🐱‍🏍🎂
 
