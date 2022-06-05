@@ -4,7 +4,7 @@ import {
   expect,
 } from '@jest/globals'
 import { TestSimple } from '../_util/Util'
-import {  Personagem } from "../../personagem/Personagem";
+import {  Personagem } from "../../modules/classes/domain/Personagem";
 
 describe('#Test abstract class Personagem', () => {
 
